@@ -1,92 +1,57 @@
 programa {
   funcao inicio() {
     
+    //solicitando variavel
 
-  //declarando variavel
+    real litros , valor , total , desconto
+    caracter combustivel
+    cadeia tipo
 
-  inteiro litros , precos , desconto , total
-  cadeia tipo
+    //solicitando dados
 
-  //solicitar numero de litros vendido
+    escreva ("escolha tipo de combustivel= A-alcool ou G-gasolina: ")
+    leia(combustivel)
+    escreva("quantos litros? ")
+    leia(litros)
 
-  escreva("digite o numero de litros vendidos ")
-  leia(litros)
+    escolha (combustivel){
+      caso 'A':
+      tipo = "alcool"
+      valor = 3.79
+      total = valor* litros
+      se (litros <=25){
+        desconto = total *0.02 
+      }senao{
+        desconto = total *0.04
+      }
+      pare
+      caso 'G':
+      tipo= "gasolina"
+      valor = 6.59
+      total = valor * litros
+
+      se(litros<=25){
+        desconto = total *0.03
+      }senao{
+        desconto = total *0.05
+      }
+      pare
+
+      escreva("\nCombustivel: ", tipo)
+      escreva("\nValor: ", total)
+
+
+
+
+
+
+
+
+
+
+
+    }
   
-  //tipo de combustivel
   
-  escreva("digite tipo de combustivel (alcool ou gasolina ) ")
-    leia(tipo)
-
-   //tipo de combustivel (alcool) e calculo de valores e promocoes
-
-   se (tipo == 'A' == 'a'){
-   }
-
-   //valor do combustivel alcool
-   
-   se (litros<= 25) {
-   }
-   //aplicar desconto 
-
-   escreva("desconto de 2% litro" )
-   leia(desconto)
-   
-   //tipo de combustivel, (gasolina) calculo de valores e desconto
-
-   se (tipo == 'G' == 'g' ){
-   }
-   
-   //valor do combustivel gasolina
-
-   se (litros<= 25){
-   }
-
-   //aplicar desconto
-
-  
-   escreva("desconto de 3% litro" )
-   leia(desconto)
-
-   senao 
-   ("tipo de combustivel invalido! ")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   }
 }
